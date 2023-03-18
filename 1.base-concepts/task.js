@@ -3,16 +3,17 @@
 function solveEquation(a, b, c) {
   let arr = [];
 
-  const D = Math.pow(b, 2) - 4 * a * c;
+  const d = Math.pow(b, 2) - 4 * a * c;
 
-  if (D === 0) {
+  if (d === 0) {
     const x1 = -b / (2 * a);
     arr.push(x1);
   }
 
-  if (D > 0) {
-    const x1 = (-b + Math.sqrt(D)) / (2 * a);
-    const x2 = (-b - Math.sqrt(D)) / (2 * a);
+  if (d > 0) {
+    const x1 = (-b + Math.sqrt(d)) / (2 * a);
+    const x2 = (-b - Math.sqrt(d)) / (2 * a);
+    arr.push(x1, x2);
   }
 
   return arr;

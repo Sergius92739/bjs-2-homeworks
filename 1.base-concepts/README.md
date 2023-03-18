@@ -1,3 +1,5 @@
+## <a href="https://sergius92739.github.io/bjs-2-homeworks/">Github Pages</a>
+
 # Домашнее задание к лекции 1 «Основные понятия»
 
 ## Задача 1
