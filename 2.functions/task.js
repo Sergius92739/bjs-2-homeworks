@@ -4,10 +4,14 @@ function getArrayParams(...arr) {
 
   const min = Math.min(...arr);
   const max = Math.max(...arr);
-  const avg = [...arr].reduce((acc, cur) => acc + cur, 0);
+  const avg = +([...arr].reduce((acc, cur) => acc + cur, 0) / arr.length).toFixed(2);
 
   return { min, max, avg };
 }
+
+console.log(getArrayParams(-99, 99, 10))
+console.log(getArrayParams(1, 2, 3, -100, 10))
+console.log(getArrayParams(5))
 
 // Задача 2
 function summElementsWorker(...arr) {
