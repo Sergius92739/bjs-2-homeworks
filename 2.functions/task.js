@@ -9,10 +9,6 @@ function getArrayParams(...arr) {
   return { min: min, max: max, avg: avg };
 }
 
-console.log(getArrayParams(-99, 99, 10))
-console.log(getArrayParams(1, 2, 3, -100, 10))
-console.log(getArrayParams(5))
-
 // Задача 2
 function summElementsWorker(...arr) {
   if (arr.length === 0) return 0;
