@@ -35,7 +35,7 @@ class Magazine extends PrintEditionItem {
 }
 
 class Book extends PrintEditionItem {
-  constructor(name, releaseDate, pagesCount, author) {
+  constructor(author, name, releaseDate, pagesCount) {
     super(name, releaseDate, pagesCount);
     this.author = author;
     this.type = "book";
@@ -43,36 +43,25 @@ class Book extends PrintEditionItem {
 }
 
 class NovelBook extends Book {
-  constructor(name, releaseDate, pagesCount, author) {
-    super(name, releaseDate, pagesCount, author);
+  constructor(author, name, releaseDate, pagesCount) {
+    super(author, name, releaseDate, pagesCount);
     this.type = "novel";
   }
 }
 
 class FantasticBook extends Book {
-  constructor(name, releaseDate, pagesCount, author) {
-    super(name, releaseDate, pagesCount, author);
+  constructor(author, name, releaseDate, pagesCount) {
+    super(author, name, releaseDate, pagesCount);
     this.type = "fantastic";
   }
 }
 
 class DetectiveBook extends Book {
-  constructor(name, releaseDate, pagesCount, author) {
-    super(name, releaseDate, pagesCount, author);
+  constructor(author, name, releaseDate, pagesCount) {
+    super(author, name, releaseDate, pagesCount);
     this.type = "detective";
   }
 }
-
-const sherlock = new PrintEditionItem(
-  "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе",
-  2019,
-  1008
- );
- 
- console.log(sherlock.releaseDate); //2019
- console.log(sherlock.state); //100
- sherlock.fix();
- console.log(sherlock.state); //100
 
 // Задача 2. Библиотека
 class Library {
